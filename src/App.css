@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Gidole&display=swap');
+
+:root {
+  --red: #241314;
+  --gray: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gidole', sans-serif;
+  background-color: white;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin-left: 990px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+
+nav button {
+  all: unset;
+  padding: 8px 16px;
+  background-color: var(--red);
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  padding-top: 120px; /* to avoid overlapping with nav */
+  min-height: 100vh;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.hero-content p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.shop-btn {
+  all: unset;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--red);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-btn {
+  all: unset;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--gray);
+  color: var(--red);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.marketplace p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.brand-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand-icons img {
+  height: 30px;
+  object-fit: contain;
+}
+
+.hero-image img {
+  height: 400px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-image img {
+    height: 280px;
+  }
+}
